@@ -1,0 +1,6 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml)
+{
+  #_c4b582ec-4343-438c-bda2-2f691c16c262_-BAP {
+    list-style-image: url("icons/600-sound.svg") !important;
+    }
+}

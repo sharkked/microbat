@@ -1,0 +1,79 @@
+#root.root {
+	--general-margin: 6px;
+	--general-border-radius: 6px;
+	--tabs-inner-gap: 6px;
+}
+
+#root.root .Tab {
+	transition: padding-left 200ms ease-in-out 200ms;
+}
+
+#root.root:hover .Tab {
+	transition: padding-left 200ms ease-in-out;
+}
+
+#root.root:not(:hover) .Tab {
+	padding-left: 0px;
+}
+
+#nav_bar.NavigationBar.-top {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 6px;
+	margin-right: 16px;
+	border-top: 1px solid #303133;
+}
+
+#nav_bar.NavigationBar.-top {
+	max-width: calc(100% - 2 * var(--general-margin));
+}
+
+.Tab .title {
+	transition: transform 5s linear;
+	overflow-x: visible !important;
+	width: min-content;
+}
+
+.Tab:hover .title {
+	transition: transform 15s linear;
+	transform: translateX(-500px);
+}
+
+:nth-last-child(1 of .Tab) {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #303133 !important;
+}
+
+.TabsPanel .new-tab-btns {
+	margin-top: 3px;
+}
+
+.TabsPanel .new-tab-btn {
+	flex-align: left;
+}
+
+.TabsPanel .new-tab-btn > svg {
+	position: relative;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.TabsPanel .new-tab-btn:after {
+	color: var(--tabs-normal-fg);
+	content: "New tab";
+	flex: 1;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.BottomBar .tool-btn:nth-child(1) {
+	order: 3;
+}
+
+.BottomBar .tool-btn:nth-child(2) {
+	order: 1;
+}
+
+.BottomBar .tool-btn:nth-child(3) {
+	order: 2;
+}

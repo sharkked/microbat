@@ -1,0 +1,45 @@
+/*
+  Change bookmark icon color
+*/
+#star-button[starred] {
+  fill: #c2a86c !important;
+}
+
+/*
+  Fix the space between pinned tabs
+*/
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+> #tabbrowser-arrowscrollbox
+> .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}
+
+/*  
+  Hide Extension Name in the identity area unless
+  hovered for half a second
+*/
+
+#identity-box #identity-icon-box {
+  max-width: 28px !important;
+  padding: 0 6px !important;
+  overflow: hidden;
+  background-color: transparent !important;
+  transition: max-width 250ms ease-in-out;
+}
+#identity-box:hover #identity-icon-box {
+  max-width: calc(30px + 13em) !important;
+  background-color: var(--urlbar-box-hover-bgcolor) !important;
+  transition: max-width 250ms ease-in-out 500ms;
+}
+#identity-box #identity-icon-labels,
+#identity-box #identity-icon-label {
+  padding-right: 2px !important;
+  visibility: collapse !important;
+  transition: visibility 250ms ease-in-out;
+}
+#identity-box:hover #identity-icon-labels,
+#identity-box:hover #identity-icon-label {
+  visibility: visible !important;
+  transition: visibility 250ms ease-in-out 500ms;
+}
+

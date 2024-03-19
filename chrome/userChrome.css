@@ -1,0 +1,162 @@
+@import "extensions/ublock-origin.css";
+
+:root {
+  --mb-sidebar-width: 220px;
+  --mb-sidebar-collapsed-width: 44px;
+  --mb-window-margin: 8px;
+  --mb-c-background: #141414;
+  --mb-c-border: #303133;
+}
+
+#main-window {
+  background-color: var(--mb-c-background) !important;
+}
+
+#navigator-toolbox {
+  border-bottom: unset !important;
+}
+
+#nav-bar {
+  padding: 2px 0 !important;
+  border-top: none;
+}
+
+#nav-bar,
+#navigator-toolbox,
+#tabbrowser-tabs,
+#sidebar-select-box,
+#browser
+{
+  background-color: transparent !important;
+}
+
+#nav-bar-customization-target > *:first-child {
+  margin-left: 0px !important;
+  padding-left: 4px !important;
+}
+
+#TabsToolbar {
+  visibility: collapse;
+}
+
+#main-window:not([inFullscreen]) #appcontent {
+    margin: var(--mb-window-margin);
+    margin-top: 0;
+    border-radius: 8px !important;
+    border: 1px solid var(--mb-c-border);
+    overflow: hidden;
+}
+
+#sidebar-box,
+#sidebar2-box {
+  position: relative;
+  z-index: 1;
+}
+
+#sidebar2-box,
+#sidebar-select-box,
+#sidebar2-header {
+  border: none !important;
+}
+
+#sidebar-splitter {
+  visibility: collapse;
+}
+
+#sidebar-box {
+  position: relative;
+  width: var(--mb-sidebar-collapsed-width) !important;
+  min-width: var(--mb-sidebar-collapsed-width) !important;
+  margin-right: -8px !important;
+  z-index: 1;
+}
+
+#sidebar-box > #sidebar-header {
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  min-width: var(--mb-sidebar-collapsed-width) !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+  pointer-events: none !important;
+}
+
+#sidebar-box > #sidebar-header > toolbarbutton,
+#sidebar-box > #sidebar-header > #sidebar-throbber,
+#sidebar-box > #sidebar-header > spacer {
+  display: none;
+}
+
+#sidebar-box > #sidebar {
+  pointer-events: auto !important;
+}
+
+#sidebar * {
+  background-color: unset !important;
+}
+
+#sidebar-box > #sidebar,
+#sidebar-box > #sidebar-header {
+  box-shadow: 1px 0px var(--mb-c-border);
+  transition: min-width 200ms ease-in-out 200ms;
+  min-width: var(--mb-sidebar-collapsed-width) !important;
+}
+
+#sidebar-box:hover > #sidebar,
+#sidebar-box:hover > #sidebar-header {
+  transition: min-width 200ms ease-in-out;
+  min-width: var(--mb-sidebar-width) !important;
+}
+
+#main-window:not([inFullscreen]) #sidebar-header:before,
+#main-window:not([inFullscreen]) #sidebar-header:after {
+  position: absolute;
+  left: calc(100% - 4px);
+}
+
+#main-window:not([inFullscreen]) #sidebar-header:before {
+  top: -11px;
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNCcgaGVpZ2h0PScxNCc+PHBhdGggZD0nbTQgMTJhOCA4IDAgMCAxIDgtOCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjMzAzMTMzJyBzdHJva2Utd2lkdGg9JzInLz48cGF0aCBkPSdtNCAxMmE4IDggMCAwIDEgOC04di00aC0xMnYxMmg0JyBmaWxsPScjMTQxNDE0Jy8+PC9zdmc+Cg==");
+}
+
+#main-window:not([inFullscreen]) #sidebar-header:after {
+  bottom: -9px;
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNCcgaGVpZ2h0PScyMCc+PHBhdGggZD0nbTQgOGg4YTggOCAwIDAgMS04LTgnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzMwMzEzMycgc3Ryb2tlLXdpZHRoPScyJy8+PHBhdGggZD0nbTQgOGg4YTggOCAwIDAgMS04LThoLTR2MThoMTJ2LTEwJyBmaWxsPScjMTQxNDE0Jy8+PC9zdmc+");
+}
+
+#identity-box #identity-icon-box {
+  max-width: 28px !important;
+  padding: 0 6px !important;
+  overflow: hidden;
+  background-color: transparent !important;
+  transition: max-width 250ms ease-in-out;
+}
+#identity-box #identity-icon-box:hover {
+  max-width: calc(30px + 13em) !important;
+  background-color: var(--urlbar-box-hover-bgcolor) !important;
+  transition: max-width 250ms ease-in-out 500ms;
+}
+#identity-box #identity-icon-labels,
+#identity-box #identity-icon-label {
+  padding-right: 2px !important;
+  visibility: collapse !important;
+  transition: visibility 250ms ease-in-out;
+}
+#identity-box:hover #identity-icon-labels,
+#identity-box:hover #identity-icon-label:not([value=""]) {
+  visibility: visible !important;
+  transition: visibility 250ms ease-in-out 500ms;
+}
+
+
+#star-button[starred] {
+  fill: #c2a86c !important;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+> #tabbrowser-arrowscrollbox
+> .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}

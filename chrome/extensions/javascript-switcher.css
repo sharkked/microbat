@@ -1,0 +1,14 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml)
+{
+  unified-extensions-item[extension-id="{d7e0a6e7-9a50-490a-be5c-3b448be39b42}"] {
+    visibility: collapse;
+  }
+
+  #pageAction-urlbar-_d7e0a6e7-9a50-490a-be5c-3b448be39b42_ image {
+    list-style-image: url("icons/javascript-switcher.svg") !important;
+  }
+
+  #pageAction-urlbar-_d7e0a6e7-9a50-490a-be5c-3b448be39b42_[tooltiptext^="Enable"] image {
+    opacity: var(--toolbarbutton-disabled-opacity) !important;
+  }
+}

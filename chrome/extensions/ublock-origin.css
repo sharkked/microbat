@@ -1,0 +1,19 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml)
+{
+  #ublock0_raymondhill_net-BAP {
+    --icon-svg: url("icons/ublock-origin.svg");
+    list-style-image: var(--icon-svg) !important;
+  }
+  
+  #ublock0_raymondhill_net-BAP[style*="-off.png"] {
+    --icon-svg: url("icons/ublock-origin-off.svg") !important;
+  }
+
+  #ublock0_raymondhill_net-BAP[style*="-off.png"] image {
+    opacity: var(--toolbarbutton-disabled-opacity);
+  }
+
+  #ublock0_raymondhill_net-BAP[style*="-loading.png"] {
+    --icon-svg: url("icons/ublock-origin-loading.svg") !important;
+  } 
+}
