@@ -22,10 +22,9 @@
 	margin-left: 6px;
 	margin-right: 16px;
 	border-top: 1px solid #303133;
-}
-
-#nav_bar.NavigationBar.-top {
 	max-width: calc(100% - 2 * var(--general-margin));
+	padding-bottom: 0px;
+	margin-bottom: 0px
 }
 
 .Tab .title {
@@ -40,12 +39,12 @@
 }
 
 :nth-last-child(1 of .Tab) {
-	padding-bottom: 3px;
+	padding-bottom: 6px;
 	border-bottom: 1px solid #303133 !important;
 }
 
 .TabsPanel .new-tab-btns {
-	margin-top: 3px;
+	margin-top: 6px;
 }
 
 .TabsPanel .new-tab-btn {

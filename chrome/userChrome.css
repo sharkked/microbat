@@ -12,13 +12,21 @@
   background-color: var(--mb-c-background) !important;
 }
 
-#navigator-toolbox {
-  border-bottom: unset !important;
+#navigator-toolbox,
+#nav-bar {
+  border: none !important;
 }
 
 #nav-bar {
-  padding: 2px 0 !important;
-  border-top: none;
+}
+
+#titlebar {
+  border: none !important;
+}
+
+#nav-bar {
+  margin: 4px 0 !important;
+  box-shadow: none !important;
 }
 
 #nav-bar,
@@ -32,7 +40,7 @@
 
 #nav-bar-customization-target > *:first-child {
   margin-left: 0px !important;
-  padding-left: 4px !important;
+  padding-left: 8px !important;
 }
 
 #TabsToolbar {
@@ -153,6 +161,27 @@
 
 #star-button[starred] {
   fill: #c2a86c !important;
+}
+
+#PanelUI-menu-button {
+  postion: relative;
+}
+
+#PanelUI-button {
+  width: 36px !important;
+  margin-right: 6px !important;
+}
+
+#PanelUI-button:after {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2FmYjk3OSIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjEuMjUiLz48Y2lyY2xlIGN4PSIxMy4yNSIgY3k9IjgiIHI9IjEuMjUiLz48Y2lyY2xlIGN4PSIyLjc1IiBjeT0iOCIgcj0iMS4yNSIvPjwvc3ZnPgo=");
+  position: relative;
+  left: -32px;
+  top: 12px;
+  pointer-events: none;
+}
+
+#PanelUI-menu-button image {
+  opacity: 0;
 }
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
