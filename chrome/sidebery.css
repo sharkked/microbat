@@ -21,7 +21,7 @@
 	padding-right: 0px;
 	margin-left: 6px;
 	margin-right: 16px;
-	border-top: 1px solid #303133;
+	border-top: 1px solid var(--ctx-menu-separator);
 	max-width: calc(100% - 2 * var(--general-margin));
 	padding-bottom: 0px;
 	margin-bottom: 0px
@@ -38,9 +38,31 @@
 	transform: translateX(-500px);
 }
 
-:nth-last-child(1 of .Tab) {
+
+.NavigationBar .nav-item .audio,
+.Tab .audio .audio-icon {
+	width: 16px;
+	height: 16px;
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+.NavigationBar .nav-item .audio > svg {
+	top: 2px;
+	left: 2px;
+}
+
+.Tab .audio .audio-icon {
+	left: -8px;
+	top: 16px;
+	padding: 2px;
+	background-color: var(--toolbar-bg);
+}
+
+.TabsPanel :nth-last-child(1 of .Tab):not([data-preview = true]),
+.TabsPanel :nth-last-child(1 of .Tab)[data-preview] + .tab-preview {
 	padding-bottom: 6px;
-	border-bottom: 1px solid #303133 !important;
+	border-bottom: 1px solid var(--ctx-menu-separator) !important;
 }
 
 .TabsPanel .new-tab-btns {
