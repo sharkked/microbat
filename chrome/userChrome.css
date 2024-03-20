@@ -4,6 +4,7 @@
   --mb-window-margin: 8px;
   --mb-c-background: var(--lwt-accent-color);
   --mb-c-border: var(--sidebar-border-color);
+  --mb-c-starred: currentColor;
 }
 
 #navigator-toolbox,
@@ -135,4 +136,8 @@
 #identity-box:hover #identity-icon-label:not([value=""]) {
   visibility: visible !important;
   transition: visibility 250ms ease-in-out 500ms;
+}
+
+#star-button[starred] {
+  fill: var(--mb-c-starred) !important;
 }
